@@ -33,7 +33,3 @@ build:
         name: Save binaries
         code: |
           mv $GOPATH/bin $WERCKER_OUTPUT_DIR/
-          cp buildversion $WERCKER_OUTPUT_DIR/
-          cp -r $WERCKER_SOURCE_DIR/schemas $WERCKER_OUTPUT_DIR/
-          cp -r $WERCKER_SOURCE_DIR/db/queries $WERCKER_OUTPUT_DIR/
-          
