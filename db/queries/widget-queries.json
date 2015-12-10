@@ -1,0 +1,18 @@
+{
+    "FindAllWidgets": {
+        "query": "SELECT widget_id, widget_uuid, widget_name, created_on_ts, modified_on_ts FROM widget",
+        "description": "Returns aall widgets."
+    },
+    "FindWidget": {
+        "query": "SELECT widget_id, widget_uuid, widget_name, created_on_ts, modified_on_ts FROM widget WHERE widget_uuid = :widget_uuid",
+        "description": "Returns a widget for the given uuid."
+    },
+    "InsertWidget": {
+        "query": "INSERT INTO widget (widget_uuid, widget_name) VALUES (:widget_uuid, :widget_name) RETURNING widget_id",
+        "description": "Inserts a new widget into the database returning the surrogate key."
+    },
+    "UpdateWidget": {
+        "query": "UPDATE widget SET widget_name = :widget_name, modified_on_ts = now() WHERE widget_uuid = :widget_uuid",
+        "description": "Updates a widget in the database."
+    }
+}

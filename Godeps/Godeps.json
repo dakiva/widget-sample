@@ -1,0 +1,85 @@
+{
+	"ImportPath": "github.com/dakiva/widget-sample",
+	"GoVersion": "go1.5.1",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "bitbucket.org/liamstask/goose/lib/goose",
+			"Rev": "8488cc47d90c8a502b1c41a462a6d9cc8ee0a895"
+		},
+		{
+			"ImportPath": "github.com/dakiva/dbx",
+			"Comment": "0.3.3",
+			"Rev": "09ed7b5cec8fa156450a8825101dc0f8c16bdff3"
+		},
+		{
+			"ImportPath": "github.com/emicklei/go-restful",
+			"Comment": "v1.1.3-141-gf3b10ff",
+			"Rev": "f3b10ff408486b3e248197254514778285fbdea1"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "v1.2-119-g527bcd5",
+			"Rev": "527bcd55aab2e53314f1a150922560174b493034"
+		},
+		{
+			"ImportPath": "github.com/jmoiron/sqlx",
+			"Comment": "sqlx-v1.1-47-gad7f264",
+			"Rev": "ad7f2641d00865a3d5b860ccdade6f8e63dbdae6"
+		},
+		{
+			"ImportPath": "github.com/kylelemons/go-gypsy/yaml",
+			"Comment": "go.weekly.2011-11-02-19-g42fc2c7",
+			"Rev": "42fc2c7ee9b8bd0ff636cd2d7a8c0a49491044c5"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-60-gffe986a",
+			"Rev": "ffe986aba3e6cfcded8b06615965941408891ef0"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3",
+			"Comment": "v1.1.0-11-gb808f01",
+			"Rev": "b808f01f660667b1510acf216aa2b9fe7f555ddb"
+		},
+		{
+			"ImportPath": "github.com/op/go-logging",
+			"Rev": "e8d5414f0947014548c2334044a0fac13187dfee"
+		},
+		{
+			"ImportPath": "github.com/pborman/uuid",
+			"Rev": "cccd189d45f7ac3368a0d127efb7f4d08ae0b655"
+		},
+		{
+			"ImportPath": "github.com/stretchr/objx",
+			"Rev": "1a9d0bb9f541897e62256577b352fdbc1fb4fd94"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Comment": "v1.0-51-gf3960ab",
+			"Rev": "f3960ab1f9664ecc4e27c78af27cc9063d745a43"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/mock",
+			"Comment": "v1.0-51-gf3960ab",
+			"Rev": "f3960ab1f9664ecc4e27c78af27cc9063d745a43"
+		},
+		{
+			"ImportPath": "github.com/ziutek/mymysql/godrv",
+			"Comment": "v1.5.4-6-gcd9e399",
+			"Rev": "cd9e399dd74e176b6124be81f18719be5e127853"
+		},
+		{
+			"ImportPath": "github.com/ziutek/mymysql/mysql",
+			"Comment": "v1.5.4-6-gcd9e399",
+			"Rev": "cd9e399dd74e176b6124be81f18719be5e127853"
+		},
+		{
+			"ImportPath": "github.com/ziutek/mymysql/native",
+			"Comment": "v1.5.4-6-gcd9e399",
+			"Rev": "cd9e399dd74e176b6124be81f18719be5e127853"
+		}
+	]
+}

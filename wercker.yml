@@ -1,0 +1,39 @@
+box: wercker/golang
+
+services:
+  - garrow/postgresql9.3@0.0.13
+
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - setup-go-workspace
+
+    # Gets the public dependencies
+    - script:
+        name: resolve godep
+        code: |
+          if [ ! -f "$WERCKER_CACHE_DIR/bin/godep" ]; then go get github.com/tools/godep; mkdir -p $WERCKER_CACHE_DIR/bin; cp $GOPATH/bin/godep $WERCKER_CACHE_DIR/bin; fi
+
+    # Build the project
+    - script:
+        name: go install
+        code: |
+          go version
+          $WERCKER_CACHE_DIR/bin/godep go install -ldflags="-X main.version `cat buildversion`" ./...
+
+    # Test the project
+    - script:
+        name: go test
+        code: |
+          export POSTGRES_DSN="user=$WERCKER_POSTGRESQL_USERNAME password=$WERCKER_POSTGRESQL_PASSWORD host=$WERCKER_POSTGRESQL_HOST port=$WERCKER_POSTGRESQL_PORT dbname=$WERCKER_POSTGRESQL_DATABASE"
+          $WERCKER_CACHE_DIR/bin/godep go test ./...
+
+    - script:
+        name: Save binaries
+        code: |
+          mv $GOPATH/bin $WERCKER_OUTPUT_DIR/
+          cp buildversion $WERCKER_OUTPUT_DIR/
+          cp -r $WERCKER_SOURCE_DIR/schemas $WERCKER_OUTPUT_DIR/
+          cp -r $WERCKER_SOURCE_DIR/db/queries $WERCKER_OUTPUT_DIR/
+          
