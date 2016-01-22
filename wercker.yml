@@ -20,7 +20,7 @@ build:
         name: go install
         code: |
           go version
-          $WERCKER_CACHE_DIR/bin/godep go install -ldflags="-X main.version `cat buildversion`" ./...
+          $WERCKER_CACHE_DIR/bin/godep go install -ldflags="-X main.version=`cat buildversion`" ./...
 
     # Test the project
     - script:
