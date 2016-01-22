@@ -19,6 +19,7 @@ var version string = "<local dev build>"
 func main() {
 	// export the version in a package outside main
 	widget.ServiceVersion = version
+	// ensuring the favicon returns a not found
 	http.Handle("/favicon.ico", http.NotFoundHandler())
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
