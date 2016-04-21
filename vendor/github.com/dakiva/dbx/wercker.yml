@@ -4,7 +4,7 @@ services:
   - id: postgres:9.4
     env:
       POSTGRES_PASSWORD: password
-      POSTGRES_USER: sample
+      POSTGRES_USER: dbx
 
 # Build definition
 build:
@@ -12,21 +12,22 @@ build:
   steps:
     - setup-go-workspace
 
+    # Gets the public dependencies
+    - script:
+        name: go get
+        code: |
+         go get -t ./...
+
     # Build the project
     - script:
         name: go install
         code: |
           go version
-          go install -ldflags="-X main.version=`cat buildversion`" ./...
+          go install ./...
 
     # Test the project
     - script:
         name: go test
         code: |
-          export POSTGRES_DSN="user=sample password=password host=$POSTGRES_PORT_5432_TCP_ADDR port=$POSTGRES_PORT_5432_TCP_PORT sslmode=disable dbname=sample"
+          export POSTGRES_DSN="user=dbx password=password host=$POSTGRES_PORT_5432_TCP_ADDR port=$POSTGRES_PORT_5432_TCP_PORT sslmode=disable dbname=dbx"
           go test ./...
-
-    - script:
-        name: Save binaries
-        code: |
-          mv $GOPATH/bin $WERCKER_OUTPUT_DIR/

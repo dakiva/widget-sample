@@ -1,6 +1,7 @@
 {
 	"ImportPath": "github.com/dakiva/widget-sample",
-	"GoVersion": "go1.5.1",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v62",
 	"Packages": [
 		"./..."
 	],
@@ -11,11 +12,16 @@
 		},
 		{
 			"ImportPath": "github.com/dakiva/dbx",
-			"Comment": "0.3.3",
-			"Rev": "09ed7b5cec8fa156450a8825101dc0f8c16bdff3"
+			"Comment": "0.3.4",
+			"Rev": "f54e8bb1f923b442f0d2b16afaf9364640116ecd"
 		},
 		{
 			"ImportPath": "github.com/emicklei/go-restful",
+			"Comment": "v1.1.3-141-gf3b10ff",
+			"Rev": "f3b10ff408486b3e248197254514778285fbdea1"
+		},
+		{
+			"ImportPath": "github.com/emicklei/go-restful/log",
 			"Comment": "v1.1.3-141-gf3b10ff",
 			"Rev": "f3b10ff408486b3e248197254514778285fbdea1"
 		},
@@ -30,12 +36,22 @@
 			"Rev": "ad7f2641d00865a3d5b860ccdade6f8e63dbdae6"
 		},
 		{
+			"ImportPath": "github.com/jmoiron/sqlx/reflectx",
+			"Comment": "sqlx-v1.1-47-gad7f264",
+			"Rev": "ad7f2641d00865a3d5b860ccdade6f8e63dbdae6"
+		},
+		{
 			"ImportPath": "github.com/kylelemons/go-gypsy/yaml",
 			"Comment": "go.weekly.2011-11-02-19-g42fc2c7",
 			"Rev": "42fc2c7ee9b8bd0ff636cd2d7a8c0a49491044c5"
 		},
 		{
 			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-60-gffe986a",
+			"Rev": "ffe986aba3e6cfcded8b06615965941408891ef0"
+		},
+		{
+			"ImportPath": "github.com/lib/pq/oid",
 			"Comment": "go1.0-cutoff-60-gffe986a",
 			"Rev": "ffe986aba3e6cfcded8b06615965941408891ef0"
 		},
